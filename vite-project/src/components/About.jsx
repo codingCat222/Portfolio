@@ -1,4 +1,4 @@
-import { portfolioData } from "../data";
+import { portfolioData } from "../Data";
 import useScrollReveal from "./useScrollReveal";
 import "../styles/About.css";
 
