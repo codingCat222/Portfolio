@@ -1,0 +1,70 @@
+/* ============================================================
+   FOOTER STYLES
+   ============================================================ */
+
+.footer {
+  background: var(--black-1);
+  border-top: 1px solid var(--border);
+  padding: 2.5rem 0;
+}
+
+.footer__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer__brand {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--white-50);
+}
+
+.footer__brand span {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.footer__copy {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--white-20);
+  letter-spacing: 0.03em;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--white-50);
+  font-size: 0.85rem;
+  transition: var(--transition);
+}
+
+.footer__social-link:hover {
+  border-color: var(--border-hover);
+  color: var(--white);
+  background: var(--white-05);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .footer__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}

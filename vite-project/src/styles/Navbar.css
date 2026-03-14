@@ -1,0 +1,153 @@
+/* ============================================================
+   NAVBAR STYLES — floating sticky with scroll effect
+   ============================================================ */
+
+.navbar {
+  position: fixed;
+  top: 20px;                          /* floats above the page */
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 4rem);
+  max-width: 1100px;
+  z-index: 1000;
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  transition: top 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              border-radius 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              background 0.4s ease,
+              box-shadow 0.4s ease;
+}
+
+/* Scrolled state — added via JS */
+.navbar.scrolled {
+  top: 10px;
+  width: calc(100% - 6rem);
+  border-radius: 18px;
+  background: rgba(5, 5, 5, 0.88);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6),
+              0 1px 0 rgba(255, 255, 255, 0.04) inset;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.75rem;
+  height: 56px;
+}
+
+/* Brand */
+.navbar__brand {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
+  letter-spacing: -0.02em;
+}
+
+.navbar__brand span {
+  opacity: 0.4;
+}
+
+/* Desktop nav links */
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  list-style: none;
+}
+
+.navbar__links li button {
+  background: none;
+  border: none;
+  color: var(--white-50);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+  text-transform: capitalize;
+  letter-spacing: 0.01em;
+}
+
+.navbar__links li button:hover,
+.navbar__links li button.active {
+  color: var(--white);
+  background: var(--white-10);
+}
+
+/* Hire me button */
+.navbar__cta {
+  background: var(--white);
+  color: var(--black) !important;
+  padding: 6px 18px !important;
+  border-radius: var(--radius-sm) !important;
+  font-weight: 600 !important;
+}
+
+.navbar__cta:hover {
+  background: rgba(255, 255, 255, 0.85) !important;
+  color: var(--black) !important;
+}
+
+/* Hamburger */
+.navbar__hamburger {
+  display: none;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--white);
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+}
+
+/* Mobile menu */
+.navbar__mobile {
+  display: none;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  background: var(--black-1);
+  border-top: 1px solid var(--border);
+  gap: 4px;
+}
+
+.navbar__mobile.open {
+  display: flex;
+}
+
+.navbar__mobile button {
+  background: none;
+  border: none;
+  color: var(--white-50);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  text-align: left;
+  transition: var(--transition);
+  text-transform: capitalize;
+}
+
+.navbar__mobile button:hover {
+  color: var(--white);
+  background: var(--white-05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar__links {
+    display: none;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+  }
+}
