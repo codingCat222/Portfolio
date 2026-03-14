@@ -1,7 +1,7 @@
-import { portfolioData } from "../data";
+import { portfolioData } from "../Data";
 import "../styles/Hero.css";
 
-// ── Replace this import with your actual photo ──────────────
+
 import profilePhoto from "../assets/images/profile.jpg";
 
 
