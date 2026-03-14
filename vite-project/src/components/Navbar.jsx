@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { portfolioData } from "../data";
+import { portfolioData } from "../Data";
 import "../styles/Navbar.css";
 
 const NAV_LINKS = ["home", "about", "projects", "skills", "contact"];
