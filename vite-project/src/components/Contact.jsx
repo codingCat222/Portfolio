@@ -74,7 +74,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="contact__info-label">Twitter / X</div>
-                  <div className="contact__info-value">@jaytech@09</div>
+                  <div className="contact__info-value">@JohnSam21993989</div>
                 </div>
               </a>
 
